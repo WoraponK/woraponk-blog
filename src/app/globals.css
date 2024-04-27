@@ -41,6 +41,6 @@ h6 {
 
 @layer base {
   code {
-    @apply bg-black border border-primary/50 text-primary py-1 px-3 rounded-full;
+    @apply bg-black border border-primary/50 text-primary py-1 px-3 rounded-full text-sm;
   }
 }
