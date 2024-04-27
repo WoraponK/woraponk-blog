@@ -25,8 +25,6 @@ const Home: NextPage = () => {
     fetchRepos()
   }, [])
 
-  console.log(repos)
-
   return (
     <div className='container mx-auto space-y-8 px-4'>
       <MyGitHubReposSection dataList={repos} loading={reposIsLoading} />
