@@ -37,7 +37,7 @@ const cardExample = [
     },
 ]
 
-const CardGithubSection = () => {
+const CardGithubSection: React.FC = () => {
     return (
         <div className='space-y-3'>
             <h4>CardGithub</h4>

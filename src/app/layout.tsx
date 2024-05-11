@@ -1,10 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Prompt } from "next/font/google";
 import "./globals.css";
+import NextTopLoader from "nextjs-toploader";
 
 import { Navbar, Footer } from "@/components/shared";
 
-const inter = Inter({ subsets: ["latin"] });
+const prompt = Prompt({
+  subsets: ["latin", "thai"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900",]
+});
 
 export const metadata: Metadata = {
   title: "WoraponK",
@@ -18,11 +22,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-dark`}>
+      <body className={`${prompt.className} bg-dark`} suppressHydrationWarning={true}>
         <Navbar />
-        <div className="py-16 text-light">
+        <main className="pb-16 text-light">
+          <NextTopLoader
+            showSpinner={false}
+            color="#F99417"
+          />
           {children}
-        </div>
+        </main>
         <Footer />
       </body>
     </html>

@@ -1,33 +1,37 @@
 'use client'
 
 import { NextPage } from 'next'
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React, { useState, useEffect } from 'react'
+import ReactMarkdown from 'react-markdown'
 
-import { MyGitHubReposSection } from '@/containers/home-page'
+import { db } from '@/lib/firebase'
+import { collection, getDocs } from 'firebase/firestore'
+
+import { IntroduceSection } from '@/containers/home-page'
 
 const Home: NextPage = () => {
-  const [repos, setRepos] = useState<any>(null)
-  const [reposIsLoading, setReposIsLoading] = useState(true)
+  const [todos, setTodos] = useState([])
 
-  const fetchRepos = async () => {
-    try {
-      const response = await axios.get('https://api.github.com/users/WoraponK/repos')
-      setRepos(response.data)
-    } catch (error) {
-      console.error('Error fetching repos:', error)
-    } finally {
-      setReposIsLoading(false)
-    }
-  }
 
   useEffect(() => {
-    fetchRepos()
+    const fetchTodos = async () => {
+      try {
+        const collectionRef: any = await getDocs(collection(db, 'Blogs'))
+        const arr = collectionRef.docs.map((doc: any) => doc.data())
+        setTodos(arr)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+
+    fetchTodos()
   }, [])
 
+
+
   return (
-    <div className='container mx-auto space-y-8 px-4'>
-      <MyGitHubReposSection dataList={repos} loading={reposIsLoading} />
+    <div>
+      <IntroduceSection />
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Button } from '@/components/base'
 
-const ButtonSection = () => {
+const ButtonSection: React.FC = () => {
     return (
         <div className='space-y-3'>
             <h4>Button</h4>

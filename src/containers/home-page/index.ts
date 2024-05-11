@@ -1,1 +1,1 @@
-export { default as MyGitHubReposSection } from './GitHubReposSection'
+export { default as IntroduceSection } from './IntroduceSection'

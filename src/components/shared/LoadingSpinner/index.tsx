@@ -2,7 +2,7 @@ import React from 'react'
 
 import { FaSpinner } from "react-icons/fa";
 
-const LoadingSpinner = () => {
+const LoadingSpinner: React.FC = () => {
     return (
         <div className='flex justify-center pt-8'>
             <FaSpinner className='animate-spin' size={'30px'} />

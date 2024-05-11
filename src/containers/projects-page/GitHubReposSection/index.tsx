@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, Suspense } from 'react'
+import React, { useState } from 'react'
 
 import { TGithubRepos } from '@/utils/type'
 import {
@@ -28,7 +28,7 @@ const MyGitHubReposSection: React.FC<Props> = ({ dataList, loading }) => {
 
     return (
         <div className='space-y-4'>
-            <h4>GitHub Repositories</h4>
+            <h4>My GitHub Repositories</h4>
             {loading && (
                 <LoadingSpinner />
             )}

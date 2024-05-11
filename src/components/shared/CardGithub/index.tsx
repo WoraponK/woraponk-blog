@@ -40,7 +40,7 @@ const CardGithub: React.FC<Props> = ({
 
     return (
         <a href={html_url} target='_blank'>
-            <div className='border border-light rounded-lg p-4 space-y-2 bg-stone-900 transition-colors hover:bg-stone-800'>
+            <div className='border border-light/10 rounded-lg p-4 space-y-2 bg-stone-900 transition-colors hover:bg-stone-800'>
                 <div className='flex justify-between items-center'>
                     <p className='uppercase text-sm text-light/60'>public</p>
                     <div className='space-x-4 flex max-sm:hidden'>
