@@ -1,11 +1,12 @@
 import React from 'react'
 
-import { FaSpinner } from "react-icons/fa";
+import { TbFidgetSpinner } from "react-icons/tb";
 
 const LoadingSpinner: React.FC = () => {
     return (
-        <div className='flex justify-center pt-8'>
-            <FaSpinner className='animate-spin' size={'30px'} />
+        <div className='flex flex-col justify-center items-center space-y-2 pt-8 animate-pulse'>
+            <TbFidgetSpinner className='animate-spin' size={'30px'} />
+            <p>Loading . . .</p>
         </div>
     )
 }

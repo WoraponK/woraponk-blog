@@ -4,6 +4,10 @@ export const path = [
     title: 'Demo',
   },
   {
+    href: '/portfolio',
+    title: 'Portfolio',
+  },
+  {
     href: '/projects',
     title: 'Projects',
   },

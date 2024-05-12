@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-.link {
-  @apply underline-offset-[3px] hover:underline;
+::selection {
+  @apply bg-light/40 text-light;
+}
+
+.bg-dots-pattern {
+  background-image: radial-gradient(#ff6d60 7px, transparent 7px),
+    radial-gradient(#ff6d60 7px, transparent 7px);
+  background-size: 72px 72px;
+  background-position: 0 0, 36px 36px;
+  background-color: rgba(255, 110, 97, 0.95);
 }
 
 @layer base {

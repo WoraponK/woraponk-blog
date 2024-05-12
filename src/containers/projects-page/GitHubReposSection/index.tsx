@@ -49,7 +49,7 @@ const MyGitHubReposSection: React.FC<Props> = ({ dataList, loading }) => {
                     </div>
                     <Button
                         onClick={toggleClickShow}
-                        text={remainingItems > 0 ? 'Show All' : 'Show Less'}
+                        text={remainingItems > 0 ? `Show All (${dataList.length})` : 'Show Less'}
                         color='transparent'
                         className='font-bold'
                         fullWidth

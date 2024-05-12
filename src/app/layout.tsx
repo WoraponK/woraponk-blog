@@ -21,13 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scrollbar scrollbar-thumb-secondary scrollbar-track-transparent">
       <body className={`${prompt.className} bg-dark`} suppressHydrationWarning={true}>
         <Navbar />
-        <main className="pb-16 text-light">
+        <main className="py-16 text-light">
           <NextTopLoader
             showSpinner={false}
-            color="#F99417"
+            color="#30475E"
           />
           {children}
         </main>

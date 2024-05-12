@@ -44,7 +44,7 @@ const Button: React.FC<Props> = ({
     return (
         <button
             onClick={onClick}
-            className={`${colorStyle(color)} ${sizeStyle(size)} ${fullWidth && 'w-full'} ${className} rounded-lg transition-all active:scale-95 `}
+            className={`${colorStyle(color)} ${sizeStyle(size)} ${fullWidth && 'w-full'} ${className} transition-all active:scale-95 `}
         >
             {text}
         </button>

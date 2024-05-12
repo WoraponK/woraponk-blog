@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary': '#F99417',
+        'primary': '#FF6D60',
         'secondary': '#30475E',
         'light': '#E8E8E8',
         'dark': '#222831'
@@ -18,7 +18,8 @@ const config: Config = {
     },
   },
   plugins: [
-    require('@tailwindcss/typography')
+    require('@tailwindcss/typography'),
+    require('tailwind-scrollbar'),
   ],
 };
 export default config;

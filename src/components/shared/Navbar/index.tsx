@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className='bg-dark/40 backdrop-blur-sm py-12 px-4 sticky top-0'>
+      <div className='bg-dark/20 backdrop-blur-sm py-6 px-4 sticky top-0 z-50'>
         <div className='container mx-auto flex justify-between items-center'>
           <Link href={'/'}>
             <div className='group'>
